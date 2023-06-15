@@ -30,7 +30,7 @@ module.exports.createMovieBodyValidator = celebrate({
     year: Joi.string().required().min(4),
     description: Joi.string().required().min(2),
     image: Joi.string().required().pattern(/^(https?|ftp|file):\/\/[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]/),
-    trailer: Joi.string().required().pattern(/^(https?|ftp|file):\/\/[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]/),
+    trailerLink: Joi.string().required().pattern(/^(https?|ftp|file):\/\/[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]/),
     thumbnail: Joi.string().required().pattern(/^(https?|ftp|file):\/\/[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]/),
     movieId: Joi.string().required(),
     nameRU: Joi.string().required().min(2),
