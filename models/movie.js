@@ -33,7 +33,7 @@ const movieSchema = new mongoose.Schema(
         message: '400 Введён некорректный image-link',
       },
     },
-    trailer: {
+    trailerLink: {
       type: String,
       required: [true, 'Поле "trailerLink" должно быть заполнено'],
       validate: {
