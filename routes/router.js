@@ -7,11 +7,11 @@ const movieRoutes = require('./movie');
 const usersRouter = require('./users');
 const NotFoundError = require('../errors/NotFoundError');
 
-router.post('/signup', signUpBodyValidator, createUser);
-router.post('/signin', signInBodyValidator, login);
+router.post('/api/signup', signUpBodyValidator, createUser);
+router.post('/api/signin', signInBodyValidator, login);
 
-router.use('/users', auth, usersRouter);
-router.use('/movies', auth, movieRoutes);
+router.use('/api/users', auth, usersRouter);
+router.use('/api/movies', auth, movieRoutes);
 
 router.use('/*', auth, (req, res, next) => {
   next(new NotFoundError('Страница не найдена'));
