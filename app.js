@@ -12,7 +12,7 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 const errorHandler = require('./utils/errorHandler');
 const mongoPath = require('./constants/mongo');
 
-const { PORT = 3000, ADRESS } = process.env;
+const { PORT = 3001, ADRESS } = process.env;
 const app = express();
 app.use(cors());
 app.use(helmet());
