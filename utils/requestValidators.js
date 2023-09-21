@@ -3,7 +3,7 @@ const { Joi, celebrate } = require('celebrate');
 module.exports.signUpBodyValidator = celebrate({
   body: Joi.object().keys({
     email: Joi.string().required().email(),
-    password: Joi.string().required().pattern(/^[a-zA-Z0-9]{3,30}$/).min(8),
+    password: Joi.string().required().regex(/^[a-zA-Z0-9]{3,30}$/).min(8),
     name: Joi.string().min(2).max(30),
   }),
 });
@@ -11,7 +11,7 @@ module.exports.signUpBodyValidator = celebrate({
 module.exports.signInBodyValidator = celebrate({
   body: Joi.object().keys({
     email: Joi.string().required().email(),
-    password: Joi.string().required().pattern(/^[a-zA-Z0-9]{3,30}$/).min(8),
+    password: Joi.string().required().regex(/^[a-zA-Z0-9]{3,30}$/).min(8),
   }),
 });
 
